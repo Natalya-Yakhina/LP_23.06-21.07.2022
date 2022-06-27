@@ -4,7 +4,14 @@
 // 918 -> 98
 
 int rndNum = new Random().Next(100, 1000);
-Console.WriteLine($"Введите трехзначное случайное число => {rndNum}");
+Console.WriteLine($"Cлучайное трехзначное число из отрезка 100-999 => {rndNum}");
+int newNum(int num)
+{
+    int firstNum = num /100;
+    int secondNum = num % 10;
+    return firstNum *10 + secondNum;
+}
+int result = newNum(rndNum);
+Console.WriteLine($"Получившееся двухзначное число => {result}");
+// int newNum = rndNum / 100 * 10 + rndNum%10;
 
-int newNum = rndNum / 100 * 10 + rndNum%10;
-Console.WriteLine(newNum);
