@@ -2,8 +2,10 @@
 // 34,5 -- не кратно, остаток 4
 // 16, 4 -- кратно
 
-int num1 = new Random().Next(0, 100);
-int num2 = new Random().Next(0, 10);
+Console.Write("Введите число: ");
+int a = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите число: ");
+int b = Convert.ToInt32(Console.ReadLine());
 
-string result = num1%num2 == 0 ? $"{num1} кратно {num2}" : $"{num1} % {num2} = {num1 % num2}";
+string result = a % b == 0 ? $"Число {a} кратно {b}" : $"Число {a} не кратно числу {b}, остаток {a % b}";
 Console.WriteLine(result);
