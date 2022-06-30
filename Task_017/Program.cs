@@ -24,5 +24,4 @@ string Quarter(int xc, int yc) //формальный параметр c - ко�
     return "Введены некорректные координаты";
 }
 string result = Quarter(x, y); //возврат результата 
-
 Console.WriteLine(result);
