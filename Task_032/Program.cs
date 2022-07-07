@@ -14,7 +14,7 @@ int[] CreateArrayRnd(int size, int min, int max) // передает разме�
     return arr; // записывает в переменную array
 }
 
-int[] GetSumPosNegElem(int[] arr)
+int[] GetSumPosNegElem(int[] arr) // находит сумму отрицательных положительных
 {
     int sumPos = 0;
     int sumNeg = 0;
@@ -43,6 +43,15 @@ void PrintArray(int[] arr)
         else Console.Write(arr[i] + "]");
     }
 }
+void PrintSumPosNegElem(int[] sum) // вывод на печать найденные суммы
+{
+    Console.WriteLine();
+    Console.WriteLine($"Сумма положительных чисел = {sum[0]}");
+    Console.WriteLine($"Сумма отрицательных чисел = {sum[1]}");
+}
 
 int[] array = CreateArrayRnd(12, -9, 9); // нам нужен массив и диапозон
 PrintArray(array);
+
+int[] sumPosNegElem = GetSumPosNegElem(array);
+PrintSumPosNegElem(sumPosNegElem);
