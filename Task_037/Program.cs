@@ -6,34 +6,34 @@
 
 
 Console.Clear();
-int[] array = new int[6];
+int[] array = new int[7];
 
-void FillArray(int[] collection) // ввод массива
+void FillArray(int[] arr) // ввод массива
 {
     Random rnd = new Random();
-    for (int i = 0; i < collection.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         array[i] = rnd.Next(1, 10);
     }
 }
 
-void PrintArray(int[] collection) // вывод массива
+void PrintArray(int[] arr) // вывод массива
 {
-    for (int i = 0; i < collection.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < collection.Length - 1) Console.Write(collection[i] + ",");
-        else Console.Write(collection[i] + "]");
+        if (i < arr.Length - 1) Console.Write(arr[i] + ",");
+        else Console.Write(arr[i] + "]");
     }
     Console.WriteLine();
 }
 
-void Proizved(int[] collection)
+void Proizved(int[] arr)
 {
     int i = 0;
-    while (i < collection.Length / 2 + collection.Length % 2)
+    while (i < arr.Length / 2 + arr.Length % 2)
     {
-        Console.WriteLine(collection[i] * collection[collection.Length - i - 1] + " ");
+        Console.WriteLine(arr[i] * arr[arr.Length - i - 1] + " ");
         i++;
     }
 }
