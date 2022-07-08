@@ -28,20 +28,25 @@ void PrintArray(int[] arr) // вывод массива
     Console.WriteLine();
 }
 
-void Proizved(int[] arr)
+void Proizved(int[] arr) 
 {
     int i = 0;
+    Console.Write("[");
     while (i < arr.Length / 2 + arr.Length % 2)
     {
-        Console.WriteLine(arr[i] * arr[arr.Length - i - 1] + " ");
+        Console.Write(arr[i] * arr[arr.Length - i - 1] + ",");
         i++;
     }
+    if (i == 0) Console.Write("[");
+        if (i < arr.Length - 1) Console.Write(arr[i] + ",");
+        else Console.Write(arr[i] + "]");
+
+    Console.Write("]");
 }
 
 FillArray(array);
 PrintArray(array);
 Proizved(array);
-
 
 
 // ===== исходное решение без методов(на семинаре) =====
