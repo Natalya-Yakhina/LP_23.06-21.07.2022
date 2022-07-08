@@ -3,10 +3,7 @@
 
 // [345, 897, 568, 234] -> 2
 
-
-Console.Clear();
-int[] array = new int[9];
-int count = 0;
+int[] array = new int[4];
 
 void FillArray(int[] arr) // ввод массива
 {
@@ -22,7 +19,7 @@ void PrintArray(int[] arr) // вывод массива
     for (int i = 0; i < arr.Length; i++)
     {
         if (i == 0) Console.Write("[");
-        if (i < arr.Length - 1) Console.Write(arr[i] + ",");
+        if (i < arr.Length - 1) Console.Write(arr[i] + ", ");
         else Console.Write(arr[i] + "]");
     }
     Console.WriteLine();
@@ -30,16 +27,18 @@ void PrintArray(int[] arr) // вывод массива
 
 void Chetnost(int[] arr) // метод для подсчета количества четных чисел в массиве
 {
+    int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] % 2 == 0) count++;
     }
-    Console.WriteLine($"Количество четных чисел в массиве  -  {count}");
+    Console.WriteLine($"Количество четных чисел в массиве -> {count}");
 }
 
 FillArray(array);
 PrintArray(array);
 Chetnost(array);
+
 
 
 
