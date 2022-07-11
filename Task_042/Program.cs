@@ -14,8 +14,6 @@
 // }
 Console.Write("Введите числo: ");
 int num = Convert.ToInt32(Console.ReadLine());
-Base10to2(num);
-
 
 void Base10to2(int num1)
 {
@@ -26,11 +24,9 @@ void Base10to2(int num1)
     while (num1 >= 1)
     {
         a = num1 % 2;
-        b[i] = a;
         i++;
-
         num1 = num1 / 2;
-
+        Reverse(a);
         Console.Write(a);
     }
 }
