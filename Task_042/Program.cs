@@ -24,14 +24,14 @@
 
 // ======= решение через рекурсию ===========
 
-int a = 13;
-void ToBin(int n)
+int a = 13; //чтобы получить универсальную систему
+void ToBin(int n) // int baseNum
 {
     if(n == 0) return;
-    ToBin(n / 2);
-    Console.Write(n % 2);
+    ToBin(n / 2); // n / baseNum, baseNum
+    Console.Write(n % 2); // n % baseNum 
 }
-ToBin(a); // сразу выводит результат
+ToBin(a); // сразу выводит результат //а, 2
 
 // -------------------------------------------------
 // Console.Write("Введите числo: ");
