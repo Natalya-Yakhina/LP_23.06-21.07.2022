@@ -4,11 +4,6 @@
 
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
 
-
-// по системе уравнений найти х и определить координаты
-// вводит 4 значения пользователь
-
-
 Console.Write("Введите b1: ");
 double b1 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите k1: ");
@@ -18,12 +13,12 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Введите k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 
-void Intersection(double b1, double k1, double b2, double k2) // поиск значений (x ; y) точки пересечения
+void Intersection(double b1, double k1, double b2, double k2) // поиск координат (x;y)
 {
     double x = 0;
     double y = 0;
 
-    x = Math.Round ((b2 - b1) / (k1 - k2), 1); // Math.Round - округляет значение до ближайшего целого или указанного количества десятичных знаков
+    x = Math.Round ((b2 - b1) / (k1 - k2), 1); // Math.Round - округляет значение до ближайшего целого или указанного количества десятичных знаков(1)
     y = Math.Round (k1 * x + b1, 1); 
     Console.Write($"Точка пересечения двух прямых = ({x} ; {y})");
 }
