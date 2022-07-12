@@ -49,3 +49,6 @@ PrintArray(array);
 Reverse(array);
 Console.WriteLine();
 PrintArray(array);
+Array.Reverse(array);
+Console.WriteLine();
+PrintArray(array);
