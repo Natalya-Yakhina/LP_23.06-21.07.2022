@@ -28,24 +28,20 @@ void Fibonacci(int num)
 }
 Fibonacci(num);
 
+// Console.WriteLine("Введите число N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
 // void Fibonacci(int in_num)
 // {
-//     int f1 = 0;
-//     int f2 = 1;
-//     int f3 = 0;
-//     int fSum = 0;
-//     int[] fib = new int[in_num];
-//     if(in_num < 2)
-//     {
-//         Console.WriteLine($"Фибоначчи для {in_num} = ");
-//         return;
-//     }
-//     for(int i = 1; i < in_num; i++)
-//     {
-//         f3 = f2 + f1;
-//         fib[i] = i + f1;
-//         f2 = f3;
-//     }
+// int f1 = 0;
+// int f2 = 1;
+// int sum = 0;
+// Console.Write($"{f1} {f2}");
+// for (int i = 1; i <= in_num; i++)
+// {
+// sum = f1 + f2;
+// f1 = f2;
+// f2 = sum;
+// Console.WriteLine($"F({i}) = {sum}");
 // }
-// Fibonacci(in_num);
-// Console.WriteLine();
+// }
+// Fibonacci(n);
