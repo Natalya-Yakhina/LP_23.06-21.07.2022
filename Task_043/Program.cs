@@ -23,3 +23,7 @@ void Intersection(double b1, double k1, double b2, double k2) // поиск ко
     Console.Write($"Точка пересечения двух прямых = ({x} ; {y})");
 }
 Intersection(b1, k1, b2, k2);
+
+
+
+// int[] data = Console.ReadLine().Split().Select(int.Parse).ToArray; // вывод в одну строку массив целых чисел, который вводит пользователь
