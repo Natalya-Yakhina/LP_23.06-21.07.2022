@@ -37,3 +37,50 @@ void PrintMatrix(double[,] arr)
 
 double[,] arrayResult = CreateMatrixRndDouble(3, 4);
 PrintMatrix(arrayResult);
+
+//++++++++++++++++++++ через ввод значений+++++++++++++++++++++++++++++++++++++++++++
+// Console.Clear();
+
+// Console.Write("Введите количество строк массива: ");
+// int m = int.Parse(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int n = int.Parse(Console.ReadLine());
+
+// Console.Write("Введите минимальное значение элементов массива: ");
+// int min = int.Parse(Console.ReadLine());
+
+// Console.Write("Введите максимальное значение элементов массива: ");
+// int max = int.Parse(Console.ReadLine());
+
+// double[,] CreateMatrixRndDouble(int m, int n, int minimal, int maximum)
+// {
+//     double[,] arr = new double[m,n];
+//     Random rnd = new Random();
+
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             arr[i,j] = Math.Round((rnd.NextDouble() * (maximum-minimal)+minimal), 2);
+//         }
+//     }
+//     return arr;
+// }
+
+// void PrintMatrix (double[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//         if (j==0) Console.Write("|");
+//         if (j < arr.GetLength(1) - 1) Console.Write($"{arr[i, j], 4} |");
+//         else Console.Write($"{arr[i, j], 4} |");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// double[,] arrayResult = CreateMatrixRndDouble (m, n, min, max);
+// PrintMatrix (arrayResult);
