@@ -38,7 +38,7 @@ void PrintMatrix(double[,] arr)
 double[,] arrayResult = CreateMatrixRndDouble(3, 4);
 PrintMatrix(arrayResult);
 
-//++++++++++++++++++++ через ввод значений+++++++++++++++++++++++++++++++++++++++++++
+//++++++++++++++++++++ через ввод значений +++++++++++++++++++++++++++++++++++++++++++
 // Console.Clear();
 
 // Console.Write("Введите количество строк массива: ");
