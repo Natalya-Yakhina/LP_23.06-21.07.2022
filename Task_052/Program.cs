@@ -46,7 +46,7 @@ void ArithmeticMeanArray(int[,] arr)
             sumG = sumG + arr[j, i];
         }
         sumG = sumG / arr.GetLength(0); 
-        Console.WriteLine($"Среднее арифметическое столбца №{i+1} = {Math.Round(sumG, 1)}");
+        Console.WriteLine($"Среднее арифметическое столбца №{i+1} = {Math.Round(sumG, 1)}"); // сокращение
 }
 }
 int[,] arrayResult = CreateMatrixRndInt(3,4,0,10);
