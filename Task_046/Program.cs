@@ -36,5 +36,5 @@ void PrintMatrix(int[,] arr)
         Console.WriteLine();
     }
 }
-int[,] arrayResult = CreateMatrixRndInt[3, 4, -5, 5];
+int[,] arrayResult = CreateMatrixRndInt(3,4,5,10);
 PrintMatrix(arrayResult);
