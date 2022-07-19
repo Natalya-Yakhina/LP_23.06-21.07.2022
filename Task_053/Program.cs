@@ -30,19 +30,19 @@ void PrintMatrix(int[,] arr)
     }
 }
 
-void SwapRows(int[,] array)
+void ArrayChangeFirstLastString(int[,] array)
 {
-    int temp = 0;
+    int lastString = array.GetLength(0) - 1;
     for(int j = 0; j < array.GetLength(1); j++)
     {
-        temp = array[0, j];
-        array[0, j] = array[array.GetLength(0) - 1, j];
-        array[array.GetLength(0) - 1, j] = temp;
+        int temp = array[0, j];
+        array[0, j] = array[lastString, j];
+        array[lastString, j] = temp;
     }
 }
 
 int[,] arrayResult = CreateMatrixRndInt(3,4,0,10);
 PrintMatrix(arrayResult);
-SwapRows(arrayResult);
 Console.WriteLine();
+ArrayChangeFirstLastString(arrayResult);
 PrintMatrix(arrayResult);
