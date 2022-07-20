@@ -20,7 +20,11 @@ int[,,] RandomArray(int x, int y, int z)
             for (int k = 0; k < array.GetLength(2); k++)
             {
                     // array[i, j, k] = number++;
-                    array[i, j, k] = new Random().Next(10, 99);
+                    array[i, j, k] = rnd.Next(10, 99);
+                    if(array[i, j, k] == array[i, j, k]) // проверка на уникальность числа (при маленьком диапозоне не работает)
+                    {
+                        array[i, j, k] = rnd.Next(10, 99);
+                    }
             }
         }
     }
