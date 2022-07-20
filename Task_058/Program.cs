@@ -6,9 +6,11 @@
 // 18 20
 // 15 18
 
-int[,] CreateMatrixRndIntA(int m, int n) // ввод первой матрицы
+int[,] CreateMatrixRndIntA(int m, int n) // метод ввода матрицы
 {
     int[,] matrix = new int[m, n];
+    Random rnd = new Random();
+    
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
@@ -19,7 +21,7 @@ int[,] CreateMatrixRndIntA(int m, int n) // ввод первой матрицы
     return matrix;
 }
 
-void PrintMatrix(int[,] matrix) // печать двумерного массива
+void PrintMatrix(int[,] matrix) // метод печати двумерного массива
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
