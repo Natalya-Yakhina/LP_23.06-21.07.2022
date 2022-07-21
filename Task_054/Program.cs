@@ -41,12 +41,12 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-// int[,] SortIncreaseMatrix(int[,] matrix) // сортировка элементов строки по возрастанию
-// {
-//     for (int i = 0; i < matrix.GetLength(0); i++)
-//     {
-//         for (int j = 0; j < matrix.GetLength(1) - 1; j++)
-//         {
+int[,] SortIncreaseMatrix(int[,] matrix) // сортировка элементов строки по возрастанию
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+        {
 //             for (int k = j+1; k < matrix.GetLength(1); k++)
 //             {
 //                 if (matrix[i, j] > matrix[i, k])
@@ -56,43 +56,48 @@ void PrintMatrix(int[,] matrix)
 //                     matrix[i, k] = temp;
 //                 }
 //             }
-//             //======================
-//             // int min = j;
-//             // for (int k = j; k < matrix.GetLength(1); k++)
-//             // {
-//             //     if (matrix[i, k] < matrix[i, min]) min = k;
-//             // }
-//             // temp = matrix[i, j];
-//             // matrix[i, j] = matrix[i, min];
-//             // matrix[i, min] = temp;
-//             //======================
 //         }
 //     }
 //     return matrix;
 // }
-
-int[,] SortDescendingMatrix(int[,] matrix) // сортировка элементов строки по убыванию
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix.GetLength(1) - 1; j++)
-        {
-            for (int k = j+1; k < matrix.GetLength(1); k++)
+            //======================
+            int min = j;
+            for (int k = j; k < matrix.GetLength(1); k++)
             {
-                if (matrix[i, j] < matrix[i, k])
-                {
-                    int temp = matrix[i, j];
-                    matrix[i, j] = matrix[i, k];
-                    matrix[i, k] = temp;
-                }
+                if (matrix[i, k] < matrix[i, min]) min = k;
             }
+            int temp = matrix[i, j];
+            matrix[i, j] = matrix[i, min];
+            matrix[i, min] = temp;
+            //======================
         }
     }
     return matrix;
 }
 
+// int[,] SortDescendingMatrix(int[,] matrix) // сортировка элементов строки по убыванию
+// {
+//     for (int i = 0; i < matrix.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matrix.GetLength(1) - 1; j++)
+//         {
+//             for (int k = j+1; k < matrix.GetLength(1); k++)
+//             {
+//                 if (matrix[i, j] < matrix[i, k])
+//                 {
+//                     int temp = matrix[i, j];
+//                     matrix[i, j] = matrix[i, k];
+//                     matrix[i, k] = temp;
+//                 }
+//             }
+//         }
+//     }
+//     return matrix;
+// }
+
 int[,] matrix = CreateMatrixRndInt(3, 4);
 PrintMatrix(matrix);
 Console.WriteLine();
-SortDescendingMatrix(matrix);
+// SortDescendingMatrix(matrix); // вызов метода по убыванию
+SortIncreaseMatrix(matrix); // вызов метода по возрастанию
 PrintMatrix(matrix);
